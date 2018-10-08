@@ -1,4 +1,4 @@
-#About This Guide
+# About This Guide
 
 This guide is an attempt to have a single answer as to how this project should be formatted. It covers a large range of stylistic decisions, ranging from general file layout to variable naming. Both code and code documentation are covered. General documentation (such as markdown files) is not specifically covered, but may use this guide as a rough outline.
 
@@ -7,7 +7,7 @@ Since its inception, this guide has also been expanded such that it covers codin
 Note that this guide is not intended to be the answer to everything in life; it is purely to keep these files consistent. If you disagree with these points, feel free to ignore them for your own projects.
 
 
-#General Notes
+# General Notes
 
 This style guide should define points as "should be" or similar. Absolutes shouldn't be in here because I'll probably make mistakes.
 
@@ -40,7 +40,7 @@ Code should be visually broken into logical sections if practical.
 + Larger code sections should be wrapped in curly braces when practical.
 
 
-#Code Hierarchy Terminology
+# Code Hierarchy Terminology
 
 Code files can be classified as "main project files", "main library files", or "modules".
 The terms are distinguished by the hierarchy of files and their functionality.
@@ -72,7 +72,7 @@ The terms are distinguished by the hierarchy of files and their functionality.
 	+ A single module may be a library (and therefore the main library file) if it does not depend upon any files higher in hierarchy.
 
 
-#Header Files
+# Header Files
 
 All source files should have accompanying headers, regardless of the file hierarchy.
 
@@ -100,7 +100,7 @@ Each of these major sections should be followed by two empty lines, and should b
 ```
 
 
-#Naming Schemes
+# Naming Schemes
 
 + Variables (including constants), arguments, and typedefs should use underscores to separate words.
 + Functions should include no underscores.
@@ -133,7 +133,7 @@ In general, "Begin" should be used for actions, and "Start" for locations and ti
 	+ For example, `sendEndCommand()` should be renamed if the command being sent is referred to as "STOP" in the datasheet.
 
 
-#Abbreviations
+# Abbreviations
 
 Easily-understood abbreviations should be used when practical. Some examples are:
 
@@ -164,7 +164,7 @@ The abbreviations "In" and "Out" should only be used at the end of names.
 For example, "In_Data" is ambiguous without determining the data type, whereas "Data_In" clearly represents input data.
 
 
-#Data Types and Usage
+# Data Types and Usage
 
 These data types should not be used:
 
@@ -213,7 +213,7 @@ Enumerations should be used whenever they make sense.
 	+ For example, "Motor_Direction" should be an enumeration, and "Motor_Enabled" a boolean. In this example, the use of an enumeration could be avoided by renaming "Motor_Direction" to "Motor_Forward". However, this should not be done as the name "Motor_Forward" implies the motor is also enabled.
 
 
-#Documentation and Comments
+# Documentation and Comments
 
 Header files should describe their functionality at the top of the file, like so:
 ```C++
